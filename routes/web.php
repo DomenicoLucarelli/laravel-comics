@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+
+    $comics = config('comics');
+
+    // dd($comics);
     
     $links =[
         'CHARACTERS',
@@ -28,7 +32,34 @@ Route::get('/', function () {
         'SHOP'
     ];
 
-    return view('home', compact('links'));
+    $buyImages = [
+       [
+          'title'=> 'DIGITAL COMICS',
+            'img'=> 'resources/img/buy-comics-digital-comics.png',
+        ],
+
+       [
+          'title'=> 'DC MERCHANDISE',
+            'img'=> 'resources/img/buy-comics-merchandise.png',
+        ],
+
+       [
+          'title'=> 'SUBSCRIPTION',
+            'img'=> 'resources/img/buy-comics-shop-locator.png',
+        ],
+
+       [
+          'title'=> 'COMIC SHOP LOCATOR',
+            'img'=> 'resources/img/buy-comics-subscriptions.png',
+        ],
+
+       [
+          'title'=> 'DC POWER VISA',
+            'img'=> 'resources/imgbuy-dc-power-visa.svg',
+        ]
+       ];
+
+    return view('home', compact('links','comics','buyImages'));
 });
 
 
