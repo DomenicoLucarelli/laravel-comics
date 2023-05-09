@@ -137,3 +137,89 @@ nav{
         }
     }
 }
+
+.ext-container3{
+    background-image: url('../img/footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    
+
+    .container3{
+        display: flex;
+        height: 350px;
+
+        .footer-links{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            padding: 30px 0;
+    
+            width: 50%;
+            color: white;
+
+            position: relative;
+        }
+
+        .section{
+            width: calc(100% / 3 - 10px / 3 * 2);
+
+            h6{
+                text-align: center;
+            }
+
+            &:last-child{
+                position: absolute;
+                bottom: -10px;
+            }
+            ul{
+                list-style-type: none;
+
+                li{
+                    color: gray;
+                }
+            }
+
+        }
+
+        .logo{
+            height: 100%;
+            overflow: hidden;
+
+            img{
+                height: 130%;
+                position: relative;
+                top: -45px;
+            }
+        }
+    }
+
+}
+
+.ext-container4{
+
+    background-color: #303030;
+    .container4{
+        display: flex;
+        justify-content: space-between;
+
+        padding: 30px 0;
+
+        button{
+            border: 1px solid #0283fa;
+            background-color:#303030;
+            color: white;
+            text-transform: uppercase;
+            padding: 10px;
+        }
+
+        .social{
+            span{
+                text-transform: uppercase;
+                color: #0283fa;
+                font-weight: bold;
+            }
+        }
+    }
+}

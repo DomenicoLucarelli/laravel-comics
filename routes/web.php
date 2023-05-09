@@ -57,9 +57,70 @@ Route::get('/', function () {
           'title'=> 'DC POWER VISA',
             'img'=> 'resources/imgbuy-dc-power-visa.svg',
         ]
-       ];
+    ];
 
-    return view('home', compact('links','comics','buyImages'));
+    $footerList = [
+        [
+           'name' => 'DC COMICS',
+           'links' => [
+                'Characters',
+                'Comics',
+                'Movie',
+                'TV',
+                'Games',
+                'Video',
+                'News',
+            ],
+        ],
+
+        [
+           'name' => 'DC ',
+           'links' => [
+
+                'Terms of use',
+                'Privacy policy',
+                'Ad choices',
+                'Advertising',
+                'jobs',
+                'Subscriptions',
+                'Talent workshops',
+                'CPSC Certificates',
+                'Ratings',
+                'Shop help',
+                'Contact Us',
+
+            ],
+        ],
+
+        [
+           'name' => 'SITES',
+           'links' => [
+                'DC',
+                'MAD Magazine',
+                'DC kids',
+                'DC Universe',
+                'DC Power Visa',
+
+            ],
+        ],
+
+
+        [
+           'name' => 'SHOP',
+           'links' => [
+                'Shop DC',
+                'Shop DC Collectibles',
+
+            ],
+        ],
+
+
+
+    ];
+
+
+
+    return view('home', compact('links','comics','buyImages','footerList'));
 });
 
 
