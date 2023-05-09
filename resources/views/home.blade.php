@@ -9,7 +9,7 @@
 
         <div class="my-card">
             <img src="{{$item['thumb']}}" alt="">
-            <span>{{$item['series']}}</span>
+            <span><a href="{{route('action')}}">{{$item['series']}}</a></span>
         </div>
             
         @endforeach
